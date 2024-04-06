@@ -1,5 +1,5 @@
 const reLoad = (event) =>{
-    window.open('./index.html','_self');
+    window.open(window.location.pathname,'_self');
 }
 
 //image change slide
@@ -28,11 +28,26 @@ function imgChange(){
                 container.children[index].style.backgroundColor='';
             }
             index=i;
-        })
-    })
+        });
+    });
 }
 imgChange();
 
+function openOptions(links){
+    const nav = document.querySelector('nav');
+    const option = nav.querySelector('.right').querySelectorAll('img');
+    Object.values(option).forEach((e)=>{
+        e.addEventListener('click',()=>{
+            const index = Object.values(option).indexOf(e);
+            window.open(links[index],'_self');
+        });
+    });
+    
+}
+{
+    const links = ['/whislist.html','/cart.html','/account.html'];
+    openOptions(links);
+}
 //screen size
 // function screenSize(){
 //     if(screen.width==='')
