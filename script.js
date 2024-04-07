@@ -1,5 +1,7 @@
-const reLoad = (event) =>{
-    window.open(window.location.pathname,'_self');
+const reLoad = () =>{
+    setTimeout(()=>{
+        window.open(document.location.pathname,'_self');
+    },1000)
 }
 
 //image change slide
