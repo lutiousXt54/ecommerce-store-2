@@ -50,7 +50,3 @@ function openOptions(links){
     const links = ['/whislist.html','/cart.html','/account.html'];
     openOptions(links);
 }
-//screen size
-// function screenSize(){
-//     if(screen.width==='')
-// }

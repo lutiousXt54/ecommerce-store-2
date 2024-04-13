@@ -137,6 +137,10 @@ main > .sales-item > .item{
     flex-direction: column;
     gap:0;
     position:relative;
+    cursor: pointer;
+}
+main > .sales-item > .item:hover{
+    transform: scale(1.01);
 }
 main > .sales-item > .item > .discount{
     width:fit-content;
@@ -164,6 +168,22 @@ main > .sales-item > .item > .card{
         display:none;
     }
 }
+main > .sales-item > .item > .spec{
+    width:1.5rem;
+    position: absolute;
+    display: flex;
+    flex-direction:column;
+    top:0.25rem;
+    left:85%;
+    img{
+        width:100%;
+        border-radius:50%;
+    }
+    img:hover{
+        transform: scale(1.1);
+    }
+}
+
 main > .sales-item > .item > .card:hover{
     img{
         width:100%;
@@ -184,8 +204,8 @@ main > .sales-item > .item > .card:hover{
         position: absolute;
     }
     button:hover{
-        opacity:0.9;
-        font-size:1.2rem;
+        font-size:1.01rem;
+        transition:font-size 0.1s;
     }
 }
 main > .sales-item > .item > .card > img{
@@ -369,8 +389,8 @@ main > .selling-products > .item > .card:hover{
         position: absolute;
     }
     button:hover{
-        opacity:0.9;
-        font-size:1.2rem;
+        font-size:1.01rem;
+        transition:font-size 0.1s;
     }
 }
 main > .selling-products > .item > .card > img{
@@ -431,7 +451,7 @@ main > .products > .item > .spec > img{
     border-radius:50%;
 }
 main > .products > .item > .spec > img:hover{
-    width:1.4rem;
+    transform: scale(1.02);
 }
 main > .products > .item > .card{
     width:100%;
@@ -464,8 +484,8 @@ main > .products > .item > .card:hover{
         position: absolute;
     }
     button:hover{
-        opacity:0.9;
-        font-size:1.2rem;
+        font-size:1.01rem;
+        transition:font-size 0.1s;
     }
 }
 main > .products > .item > .text{
@@ -633,10 +653,24 @@ footer > .download > .img > .download > .apps{
 footer > .download > .img > .logo{
     display:flex;
     flex-direction: row;
-    /* padding:-0.5rem; */
+    align-items: center;
     img{
-        width:25%;
+        background-color:white;
+        border-radius:50%;
+        width:3vw;
     }
+}
+
+/* side effects on hover */
+.item{
+    cursor: pointer;
+}
+.item:hover{
+    transform:scale(1.01);
+}
+.item > .card > button:hover{
+    font-size:1.1rem;
+    transition:font-size 0.1s;
 }
 
 ::placeholder{
