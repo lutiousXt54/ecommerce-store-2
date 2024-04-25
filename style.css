@@ -108,6 +108,250 @@ nav{
 .menu{
     display: none;
 }
+header{
+    width:var(--compwidth);   
+    display: flex;
+    flex-direction: row;
+    gap:13%;
+}
+header > .left{
+    width:20%;
+    height:45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap:0.25rem;
+    li{
+        list-style:none;
+        height:2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        a{
+            text-decoration: none;
+            color:black;
+            text-transform: capitalize;
+            font-weight:600;
+            margin-left:0.5rem;
+        }
+        img{
+            width: 1.25rem;
+            display: none;
+        }
+    }
+    li:hover{
+        box-shadow:0px 0px 5px rgb(214, 214, 214);
+        img{
+            display: inline;
+        }
+    }
+}
+header > .right{
+    width:80%;
+    height:45vh;
+    display: flex;
+    flex-direction: row;
+    overflow:scroll hidden;
+    scroll-snap-type:inline mandatory;
+    scroll-margin-inline:start;
+    .card{
+        min-width:98%;
+        display: flex;
+        position: relative;
+        padding:0.5rem;
+        scroll-snap-align:center;
+        margin-right:0.5rem;
+        img{
+            width:100%;
+            height:100%;
+        }
+        .text{
+            position: absolute;
+            top:2vh;
+            left:2vw;
+            display: flex;
+            flex-direction: column;
+            gap:1rem;
+            .h1{
+                color: white;
+                font-size:3rem;
+            }
+            a{
+                text-decoration:none;
+                color:white;
+                text-transform: capitalize;
+                font-size:1.25rem;
+                text-decoration: underline white 1px;
+                text-underline-offset:0.35rem;
+            }
+            a:hover{
+                opacity:0.8;
+            }
+        }
+
+    }
+}
+main{
+    width:var(--compwidth);
+    display: flex;
+    flex-direction: column;
+    margin:2rem 0;
+}
+main > .flash-sales{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    .items{
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin:1rem 0;
+        gap:5vw;
+        .card{
+            position: relative;
+            max-width:11rem;
+            display: flex;
+            flex-direction: column;
+            gap:0.25rem;
+            padding:0.5rem;
+            background-color:rgb(243, 243, 243);
+            justify-self:left;
+            border-radius:0.25rem;
+            .off{
+                position: absolute;
+                top:0.7rem;
+                left:0.7rem;
+                background-color:rgb(235, 72, 72);
+                border-radius:0.2rem;
+                font-size:0.9rem;
+                padding:0.1rem 0.25rem;
+                font-weight:500;
+                color:white;
+                z-index:1;
+            }
+            .float{
+                width:1rem;
+                position: absolute;
+                top:0.7rem;
+                right:1rem;
+                display:flex;
+                flex-direction: column;
+                gap:0.25rem;
+                z-index:1;
+                img{
+                    width:100%;
+                    background-color:rgb(243, 241, 241);
+                    border-radius:50%;
+                    padding:0.2rem;
+                }
+            }
+            .box{
+                position: relative;
+                border-radius:0.25rem;
+                img{
+                    width:100%;
+                }
+                button{
+                    display:none;
+                }
+            }
+            .box:hover{
+                button{
+                    display: block;
+                    position: absolute;
+                    bottom:0;
+                    width:100%;
+                    height:1.5rem;
+                    outline:none;
+                    border:none;
+                    background-color:rgb(0, 0, 0);
+                    color:white;
+                    text-transform: capitalize;
+                    font-weight:600;
+                    font-size:0.9rem;
+                    border-radius:0.25rem;
+                }
+                button:hover{
+                    opacity:0.85;
+                }
+            }
+            .text{
+                width:100%;
+                display: flex;
+                flex-direction: column;
+                gap:0.25rem;
+                .h3{
+                    font-size:0.9rem;
+                    font-weight:600;
+                    text-transform: capitalize;
+                }
+                .h5{
+                    font-size:0.85rem;
+                    font-weight:700;
+                    color:rgb(255, 79, 79);
+                    word-spacing:0.35rem;
+                    span{
+                        color:rgb(150, 149, 149);
+                        text-decoration:line-through;
+                    }
+                }
+            }
+        }
+        .card:hover{
+            box-shadow:0px 0px 5px rgb(212, 212, 212);
+        }
+    }
+}
+.catelogs{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .left-section{
+        width:fit-content;
+        display: flex;
+        flex-direction: column;
+        gap:0.5rem;
+        .box{
+            height:2rem;
+            display: flex;
+            flex-direction:row;
+            align-items: center;
+            gap:0.5rem;
+            div{
+                width:0.6rem;
+                height:1.25rem;
+                background-color:rgb(231, 58, 58);
+                border-radius:0.15rem;
+            }
+            h5{
+                font-size:1.05rem;
+                text-transform: capitalize;
+                color:rgb(231, 58, 58);
+            }
+
+        }
+        .text{
+            font-size:25px;
+            font-weight:600;
+            text-transform: capitalize;
+        }
+    }
+    .right-section{
+        width:fit-content;
+        display: flex;
+        flex-direction: row;
+        gap:0.7rem;
+        align-self: flex-end;
+        img{
+            width:1.5rem;
+            border-radius:50%;
+            background-color:rgb(233, 232, 232);
+        }
+    }
+}
 @media (max-width:1036px) {
     nav{
         .info{
@@ -207,6 +451,68 @@ nav{
         select{
             width:7rem;
             height:1.5rem;
+        }
+    }
+    header > .left{
+        display:none;
+    }
+    header > .right{
+        width:100%;
+    }
+    .container{
+        position: fixed;
+        width:40%;
+        height:100vh;
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        padding:1rem;
+        z-index:2;
+        top:0;
+        left:0;
+        bottom:0;
+        background-color:whitesmoke;
+        .heading{
+            width:100%;
+            height:3rem;
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom:solid 1px rgb(192, 188, 188);
+            h1{
+                font-size:1.6rem;
+                text-transform: capitalize;
+            }
+            img{
+                width:1.5rem;
+            }
+        }
+        .left{
+            width:100%;
+            height:fit-content;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            li{
+                height:2rem;
+                list-style:none;
+                border-bottom: solid 1px rgb(194, 191, 191);
+                a{
+                    color:black;
+                    text-decoration:none;
+                    font-weight:600;
+                    text-transform: capitalize;
+                }
+                img{
+                    display:none;
+                }
+            }
+            li:hover{
+                a{
+                    opacity:0.9;
+                }
+            }
         }
     }
 }

@@ -22,5 +22,29 @@ const menu = ()=>{
     removeImg.addEventListener('click',()=>{
         menuDiv.style.display='none';
     })
-    console.log(menuDiv);
+}
+
+const items = (event)=>{
+    const containerDiv = document.createElement('div');
+    containerDiv.className='container';
+    const heading = document.createElement('div');
+    heading.className='heading';
+    const h1 =document.createElement('h1');
+    h1.textContent='categories'
+    const removeImg = document.createElement('img');
+    removeImg.src='./images/cross.svg';
+    const categories = document.querySelector('.left');
+    heading.appendChild(h1);
+    heading.appendChild(removeImg);
+    containerDiv.appendChild(heading);
+    containerDiv.appendChild(categories);
+    document.body.appendChild(containerDiv);
+    document.body.addEventListener('click',(event)=>{
+        if(event.target==removeImg){
+            containerDiv.style.display='none';
+        }
+    });
+    event.target.addEventListener('click',()=>{
+        containerDiv.style.display='none';
+    });
 }
